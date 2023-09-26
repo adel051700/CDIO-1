@@ -11,4 +11,8 @@ class Dicegame {
             System.out.println(playerTurn);
 
 }
+        public static void testfunc(int die1, int die2)
+        {
+            player1.points = 10;
+        }
 }
