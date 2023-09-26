@@ -9,10 +9,12 @@ class Dicegame {
             int playerTurn = 1;
             int deanos = isSame.isSame(die1,die2,playerTurn);
             System.out.println(playerTurn);
+            
+            public static void updatePoints(int deltaPoints)
+            {
+                return;
+            }
 
 }
-        public static void testfunc(int die1, int die2)
-        {
-            player1.points = 10;
-        }
+
 }
