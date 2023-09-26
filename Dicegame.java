@@ -13,11 +13,13 @@ class Dicegame {
 
             int deltaPoints = die1 + die2;
             if (die1 == die2) {
-                if (lastThrowDouble == true) {
+                if (lastThrowDouble == true && die1==6) {
                     System.out.println("Player " + playerTurn + " wins!");
                     break;
                 }
+                if (die1==6){
                 lastThrowDouble = true;
+                }
                 if (playerTurn == 1) {
                     player1 = player1 + deltaPoints;
 
