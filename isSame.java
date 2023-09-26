@@ -9,6 +9,7 @@ class isSame {
             System.out.println("You get another throw");
             DiceCups.sum(Die1, Die2);
         }
-        return isSame(Die1, Die2);
+        var playerTurn = 1;
+        return playerTurn;
     }    
 }
