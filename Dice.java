@@ -1,5 +1,5 @@
 /**
- * Dice
+ * Class has method rollDie, that returns a random integer between 1 and 6.
  */
 class Dice {
 
