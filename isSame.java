@@ -1,15 +1,15 @@
 class isSame {
 
-    public static int isSame(int Die1, int Die2) {
+    public static int isSame(int Die1, int Die2, int playerTurn) {
         
         if(Die1 == 1 && Die2 == 1) {
             System.out.println("You lose all points");
 
         }else if(Die1 == Die2) {
             System.out.println("You get another throw");
-            DiceCups.plus(Die1, Die2);
+            DiceCups.sum(Die1, Die2);
         }
-        var playerTurn = 1;
+        playerTurn = 1;
         return playerTurn;
     }    
 }
