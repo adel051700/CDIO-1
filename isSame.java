@@ -7,7 +7,7 @@ class isSame {
 
         }else if(Die1 == Die2) {
             System.out.println("You get another throw");
-            DiceCups.sum(Die1, Die2);
+            DiceCups.plus(Die1, Die2);
         }
         var playerTurn = 1;
         return playerTurn;
