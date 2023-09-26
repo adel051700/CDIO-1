@@ -6,7 +6,7 @@ class Dicegame {
            int die1 = Dice.rollDie();
             int die2 = Dice.rollDie();
 
-            int playerTurn = isSame.isSame(die1,die2);
+            int playerTurn = isSame.isSame(die1,die2,playerTurn);
             System.out.println(playerTurn);
 
 }
