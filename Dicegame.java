@@ -1,15 +1,14 @@
 class Dicegame {
 
     public static void main(String[] args) {
-        var player1 = 0;
-        var player2 = 0;
+        var player1Pnt = 0;
+        var player2Pnt = 0;
         boolean lastThrowDouble = false;
         int playerTurn = 1;
         while (true) {
 
             int die1 = (int) Math.floor(Math.random() * 6 + 1);
             int die2 = (int) Math.floor(Math.random() * 6 + 1);
-            System.out.println(die1 + " " + die2);
 
             int deltaPoints = die1 + die2;
             if (die1 == die2) {
@@ -21,24 +20,24 @@ class Dicegame {
                 lastThrowDouble = true;
                 }
                 if (playerTurn == 1) {
-                    player1 = player1 + deltaPoints;
+                    player1Pnt = player1Pnt + deltaPoints;
 
                     if (die1 == 1) {
-                        player1 = 0;
+                        player1Pnt = 0;
                     } else {
-                        player2 = 0;
+                        player2Pnt = 0;
                     }
                 } else {
-                    player2 = player2 + deltaPoints;
+                    player2Pnt = player2Pnt + deltaPoints;
                 }
             } else if (playerTurn == 1) {
-                player1 = player1 + deltaPoints;
+                player1Pnt = player1Pnt + deltaPoints;
 
             } else {
-                player2 = player2 + deltaPoints;
+                player2Pnt = player2Pnt + deltaPoints;
 
             }
-            if (player1 >= 40 || player2 >= 40) {
+            if (player1Pnt >= 40 || player2Pnt >= 40) {
                 System.out.println("Player " + playerTurn + " wins!");
                 break;
             }
@@ -52,8 +51,8 @@ class Dicegame {
                     lastThrowDouble = false;
                 }
             }
-            System.out.println("player1 : " + player1);
-            System.out.println("player2 : " + player2);
+            System.out.println("player1 : " + player1Pnt + " |" + die1 +" & "+ die2);
+            System.out.println("player2 : " + player2Pnt + " |" + die1 +" & "+ die2);
         }
     }
 }
