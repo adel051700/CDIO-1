@@ -36,6 +36,7 @@ class Dicegame {
                     if (player1Pnt >= 40) {
                         if (!playerOneTurn) {
                             System.out.println("Player 1 won, by having over 40 points and throwing identical die");
+                            wincon = true;
                             break;
                         } else {
                             continue;
@@ -44,6 +45,7 @@ class Dicegame {
                     if (player2Pnt >= 40) {
                         if (playerOneTurn) {
                             System.out.println("Player 2 won, by having over 40 points and throwing identical die");
+                            wincon = true;
                             break;
                         } else {
                             continue;
