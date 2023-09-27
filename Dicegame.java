@@ -16,8 +16,8 @@ class Dicegame {
                 System.out.println("It's player 2's turn, press the enter button to throw the dice.");
             }
             s.nextLine();
-            int die1 = (int) Math.floor(Math.random() * 6 + 1);
-            int die2 = (int) Math.floor(Math.random() * 6 + 1);
+            int die1 = Dice.rollDie();
+            int die2 = Dice.rollDie();
 
             if (die1 + die2 != 2) {
                 if (playerOneTurn) {
