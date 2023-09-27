@@ -8,8 +8,8 @@ class Dicegame {
         boolean lastThrowDouble = false;
         boolean playerOneTurn = true;
         var s = new Scanner(System.in);
-
-        while (player1Pnt < 40 && player2Pnt < 40) {
+        var wincon = false;
+        while (!wincon) {
             if (playerOneTurn) {
                 System.out.println("It's player 1's turn, press the enter button to throw the dice.");
             } else {
@@ -33,6 +33,22 @@ class Dicegame {
                 }
 
                 if (die1 == die2) {
+                    if (player1Pnt >= 40) {
+                        if (!playerOneTurn) {
+                            System.out.println("Player 1 won, by having over 40 points and throwing identical die");
+                            break;
+                        } else {
+                            continue;
+                        }
+                    }
+                    if (player2Pnt >= 40) {
+                        if (playerOneTurn) {
+                            System.out.println("Player 2 won, by having over 40 points and throwing identical die");
+                            break;
+                        } else {
+                            continue;
+                        }
+                    }
                     if (lastThrowDouble && die1 == 6) {
                         if (playerOneTurn) {
                             System.out.println("Player 1 Wins");
@@ -63,8 +79,5 @@ class Dicegame {
             }
         }
         s.close();
-        var playerWin = player1Pnt >= 40 ? "Player 1 Wins" : "Player 2 Wins";
-        System.out.println(playerWin);
-
     }
 }
