@@ -52,7 +52,6 @@ class Dicegame {
                         
                             System.out.println("Player 1 won, by having over 40 points and throwing identical die");
                             winCon = true;
-                            break;
 
                         } else {
                             continue;
@@ -63,11 +62,6 @@ class Dicegame {
                         if ((player2Pnt - (die1 + die2)) >= 40) {
                             System.out.println("Player 2 won, by having over 40 points and throwing identical die");
                             winCon = true;
-                            break;
-
-                        } else {
-                            continue;
-
                         }
                     }
 // The code block you provided is checking if the variable `lastThrowDouble` is `true` and if the value
@@ -75,10 +69,10 @@ class Dicegame {
                     if (lastThrowDouble && die1 == 6) {
                         if (playerOneTurn) {
                             System.out.println("Player 1 Wins");
-                            
+                            winCon=true;
                         } else if (!playerOneTurn) {
                             System.out.println("Player 2 Wins");
-
+                            winCon=true;
                         }
 
                     }
