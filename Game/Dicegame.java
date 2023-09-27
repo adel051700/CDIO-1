@@ -47,23 +47,19 @@ class Dicegame {
                     // has rolled a double (i.e., both dice have the same value). If these conditions
                     // are met, it declares the player as the winner and sets the `winCon` variable to
                     // `true` to exit the game loop.
-                    if (playerOneTurn) {
-                    if ((player1Pnt - (die1 + die2)) >= 40) {
+                    if (playerOneTurn&&(player1Pnt - (die1 + die2)) >= 40) {
                         
                             System.out.println("Player 1 won, by having over 40 points and throwing identical die");
                             winCon = true;
 
-                        } else {
-                            continue;
-                            
-                        }
-                    }
-                    if (!playerOneTurn) {
-                        if ((player2Pnt - (die1 + die2)) >= 40) {
+                        } 
+                        if (!playerOneTurn&&(player2Pnt - (die1 + die2)) >= 40
+                        ) {
+
                             System.out.println("Player 2 won, by having over 40 points and throwing identical die");
                             winCon = true;
                         }
-                    }
+                    
 // The code block you provided is checking if the variable `lastThrowDouble` is `true` and if the value
 // of `die1` (the first dice roll) is equal to 6.
                     if (lastThrowDouble && die1 == 6) {
@@ -80,28 +76,20 @@ class Dicegame {
 // This code block is checking if the value of `die1` (the first dice roll) is equal to 6. If it is, it
 // sets the variable `lastThrowDouble` to `true`.
                     if (die1 == 6) {
-                        if ((player1Pnt - (die1 + die2)) >= 40) {
-                            if (playerOneTurn) {
+                        if (playerOneTurn&&(player1Pnt - (die1 + die2)) >= 40) {
+                            
                                 System.out.println("Player 1 won, by having over 40 points and throwing identical die");
                                 winCon = true;
-                                break;
-
-                            } else {
-                                continue;
 
                             }
-                        }
-                        if ((player2Pnt - (die1 + die2)) >= 40) {
-                            if (!playerOneTurn) {
+                        
+                        if (!playerOneTurn&&(player2Pnt - (die1 + die2)) >= 40) {
+                            
                                 System.out.println("Player 2 won, by having over 40 points and throwing identical die");
                                 winCon = true;
-                                break;
-                            } else {
-                                continue;
-
-                            }
 
                         }
+                        
                         lastThrowDouble = true;
                     }
 // The code block you provided is toggling the value of the boolean variable `playerOneTurn`. If
