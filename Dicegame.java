@@ -3,8 +3,8 @@ import java.util.Scanner;
 class Dicegame {
 
     public static void main(String[] args) {
-        var player1Pnt = 0;
-        var player2Pnt = 0;
+        var player1Pnt = Player.points;
+        var player2Pnt = Player.points;
         boolean lastThrowDouble = false;
         boolean playerOneTurn = true;
         var s = new Scanner(System.in);
@@ -22,13 +22,11 @@ class Dicegame {
             if (die1 + die2 != 2) {
                 if (playerOneTurn) {
                     player1Pnt += die1 + die2;
-                    System.out
-                            .println("Player 1 rolls a " + die1 + " & a " + die2 + " and now has " + player1Pnt + "\n");
+                    System.out.println("Player 1 rolls a " + die1 + " & a " + die2 + " and now has " + player1Pnt + "\n");
                     playerOneTurn = false;
                 } else {
                     player2Pnt += die1 + die2;
-                    System.out
-                            .println("Player 2 rolls a " + die1 + " & a " + die2 + " and now has " + player2Pnt + "\n");
+                    System.out.println("Player 2 rolls a " + die1 + " & a " + die2 + " and now has " + player2Pnt + "\n");
                     playerOneTurn = true;
                 }
 
@@ -62,6 +60,27 @@ class Dicegame {
 
                     if (die1 == 6) {
                         lastThrowDouble = true;
+                        if ((player1Pnt - (die1 + die2)) >= 40) {
+                            if (!playerOneTurn) {
+                                System.out.println("Player 1 won, by having over 40 points and throwing identical die");
+                                wincon = true;
+                                break;
+                            } else {
+                                continue;
+                        }
+                        }
+                        if ((player2Pnt - (die1 + die2)) >= 40) {
+                            if (playerOneTurn) {
+                                System.out.println("Player 2 won, by having over 40 points and throwing identical die");
+                                wincon = true;
+                                break;
+                            } else {
+                                continue;
+                            }
+                     }
+
+                    }
+
                         if (playerOneTurn) {
                             playerOneTurn = true;
                         } else {
@@ -74,7 +93,6 @@ class Dicegame {
                         playerOneTurn = true;
                     }
 
-                }
             } else {
                 if (playerOneTurn) {
                     System.out.println("Player 1 rolled two 1's and loses all points \n");
