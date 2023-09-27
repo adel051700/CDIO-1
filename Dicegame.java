@@ -33,7 +33,7 @@ class Dicegame {
                 }
 
                 if (die1 == die2) {
-                    if (player1Pnt >= 40) {
+                    if ((player1Pnt - (die1 + die2)) >= 40) {
                         if (!playerOneTurn) {
                             System.out.println("Player 1 won, by having over 40 points and throwing identical die");
                             wincon = true;
@@ -42,7 +42,7 @@ class Dicegame {
                             continue;
                         }
                     }
-                    if (player2Pnt >= 40) {
+                    if ((player2Pnt - (die1 + die2)) >= 40) {
                         if (playerOneTurn) {
                             System.out.println("Player 2 won, by having over 40 points and throwing identical die");
                             wincon = true;
@@ -62,6 +62,11 @@ class Dicegame {
 
                     if (die1 == 6) {
                         lastThrowDouble = true;
+                        if (playerOneTurn) {
+                            playerOneTurn = true;
+                        } else {
+                            playerOneTurn = false;
+                        }
                     }
                     if (playerOneTurn) {
                         playerOneTurn = false;
