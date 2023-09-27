@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Dicegame {
 
     public static void main(String[] args) {
@@ -5,8 +7,15 @@ class Dicegame {
         var player2Pnt = 0;
         boolean lastThrowDouble = false;
         boolean playerOneTurn = true;
+        var s = new Scanner(System.in);
 
         while (player1Pnt < 40 && player2Pnt < 40) {
+            if (playerOneTurn) {
+                System.out.println("It's player 1's turn, press the space button to throw the dice.");
+            } else {
+                System.out.println("It's player 2's turn, press the space button to throw the dice.");
+            }
+            s.nextLine();
             int die1 = (int) Math.floor(Math.random() * 6 + 1);
             int die2 = (int) Math.floor(Math.random() * 6 + 1);
 
@@ -53,9 +62,9 @@ class Dicegame {
                 }
             }
         }
-            var playerWin = player1Pnt >= 40 ? "Player 1 Wins" : "Player 2 Wins";
-            System.out.println(playerWin);
+        s.close();
+        var playerWin = player1Pnt >= 40 ? "Player 1 Wins" : "Player 2 Wins";
+        System.out.println(playerWin);
 
-        
     }
 }
