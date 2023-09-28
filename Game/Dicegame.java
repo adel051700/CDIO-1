@@ -76,6 +76,9 @@ class Dicegame {
 // sets the variable `lastThrowDouble` to `true`.
                     if (die1 == 6) {                        
                         lastThrowDouble = true;
+                    } 
+                    if (lastThrowDouble && die1 !=6){
+                        lastThrowDouble = false;
                     }
 // The code block you provided is toggling the value of the boolean variable `playerOneTurn`. If
 // `playerOneTurn` is `true`, it sets it to `false`, and if it is `false`, it sets it to `true`. This
