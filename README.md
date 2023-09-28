@@ -8,6 +8,6 @@ The program...
 
 For the user:
 How to start the program:
-Step 1: 
-Step 2:
+Step 1: Double click the RunGame.bat file
+Step 2: When the terminal opens up and the game start, press enter to throw the dice.
 Step 3:
