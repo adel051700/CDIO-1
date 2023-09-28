@@ -61,7 +61,7 @@ class Dicegame {
                     
 // The code block you provided is checking if the variable `lastThrowDouble` is `true` and if the value
 // of `die1` (the first dice roll) is equal to 6.
-                    if (lastThrowDouble && die1 == 6) {
+                    if (lastThrowDouble && die1 == 6 && !winCon) {
                         if (playerOneTurn) {
                             System.out.println("Player 1 Wins");
                             winCon=true;
