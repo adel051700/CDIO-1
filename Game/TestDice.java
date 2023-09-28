@@ -88,30 +88,18 @@ public class TestDice {
         double eP6n8 = (5.0/36.0) * amountOfTestRolls;
         double eP7 = (6.0/36.0) * amountOfTestRolls;
         double ePD = (1.0/6.0) * amountOfTestRolls;
-        double tP2 = sumis2;
-        double tP3 = sumis3;
-        double tP4 = sumis4;
-        double tP5 = sumis5;
-        double tP6 = sumis6;
-        double tP7 = sumis7;
-        double tP8 = sumis8;
-        double tP9 = sumis9;
-        double tP10 = sumis10;
-        double tP11 = sumis11;
-        double tP12 = sumis12;
-        double tPD = rollDouble;
-        double testDeviation = ((Math.abs(tP2 - eP2n12) / eP2n12) + 
-                                (Math.abs(tP3 - eP3n11) / eP3n11) + 
-                                (Math.abs(tP4 - eP4n10) / eP4n10) + 
-                                (Math.abs(tP5 - eP5n9) / eP5n9) + 
-                                (Math.abs(tP6 - eP6n8) / eP6n8) + 
-                                (Math.abs(tP7 - eP7) / eP7) + 
-                                (Math.abs(tP8 - eP6n8) / eP6n8) + 
-                                (Math.abs(tP9 - eP5n9) / eP5n9) + 
-                                (Math.abs(tP10 - eP4n10) / eP4n10) + 
-                                (Math.abs(tP11 - eP3n11) / eP3n11) + 
-                                (Math.abs(tP12 - eP2n12) / eP2n12) +
-                                (Math.abs(tPD - ePD) / ePD)) * 100.0 / 12.0;
+        double testDeviation = ((Math.abs(sumis2 - eP2n12) / eP2n12) + 
+                                (Math.abs(sumis3 - eP3n11) / eP3n11) + 
+                                (Math.abs(sumis4 - eP4n10) / eP4n10) + 
+                                (Math.abs(sumis5 - eP5n9) / eP5n9) + 
+                                (Math.abs(sumis6 - eP6n8) / eP6n8) + 
+                                (Math.abs(sumis7 - eP7) / eP7) + 
+                                (Math.abs(sumis8 - eP6n8) / eP6n8) + 
+                                (Math.abs(sumis9 - eP5n9) / eP5n9) + 
+                                (Math.abs(sumis10 - eP4n10) / eP4n10) + 
+                                (Math.abs(sumis11 - eP3n11) / eP3n11) + 
+                                (Math.abs(sumis12 - eP2n12) / eP2n12) +
+                                (Math.abs(rollDouble - ePD) / ePD)) * 100.0 / 12.0;
 
 
 
