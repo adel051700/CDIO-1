@@ -24,46 +24,46 @@ public class TestDice {
         int sum = die1 + die2;
 
             if(die1 == die2){
-                rollDouble = rollDouble +1;
+                rollDouble++;
             }
 
             switch (sum){
                 case 2 -> { 
-                    sumis2 = sumis2 + 1;
+                    sumis2++;
                 }
                 case 3 -> {
-                    sumis3 = sumis3 + 1;
+                    sumis3++;
                 }
                 case 4 -> {
-                    sumis4 = sumis4 +1 ;
+                    sumis4++;
                 }
                 case 5 -> {
-                    sumis5 = sumis5 + 1;
+                    sumis5++;
                 }
                 case 6 -> {
-                    sumis6 = sumis6 + 1;
+                    sumis6++;
                 }
                 case 7 -> {
-                    sumis7 = sumis7 + 1;
+                    sumis7++;
                 }
                 case 8 -> {
-                    sumis8 = sumis8 + 1;
+                    sumis8++;
                 }
                 case 9 -> {
-                    sumis9 = sumis9 + 1;
+                    sumis9++;
                 } 
                 case 10 -> {
-                    sumis10 = sumis10 + 1;
+                    sumis10++;
                 }
                 case 11 -> {
-                    sumis11 = sumis11 + 1;
+                    sumis11++;
                 }
                 case 12 -> {
-                    sumis12 = sumis12 + 1;
+                    sumis12++;
                 }
             }
 
-            deviation = deviation + (sum - 7) * (sum - 7);
+            deviation += Math.sqrt(Math.pow((sum - 7),2));
         }
         double standardDeviation = deviation / amountOfTestRolls;
         double afvigelse = (standardDeviation / Math.sqrt(amountOfTestRolls)) * 100;
@@ -116,7 +116,7 @@ public class TestDice {
 
 
         System.out.println("This test deviates " + testDeviation + "% from the actual probabilities when rolling two dice");
-        System.out.println(afvigelse);
+        System.out.println(standardDeviation);
     }
 
     }
