@@ -26,9 +26,8 @@ class Dicegame {
             }
             s.nextLine();
 
-// The code block you provided is checking if the sum of the two dice rolls is not equal to 2. If it is
-// not equal to 2, it means that the player did not roll two 1's.
-            if (die1 + die2 != 2) {
+// The code block you provided is checking if both dice are ones, and if not, adds points to the player object
+            if (die1 != 1 || die2 != 1) {
                 if (playerOneTurn) {
                     player1Pnt += die1 + die2;
                     System.out.println("Player 1 rolls a " + die1 + " & a " + die2 + " and now has " + player1Pnt + "\n");
