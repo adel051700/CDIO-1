@@ -74,21 +74,7 @@ class Dicegame {
 
 // This code block is checking if the value of `die1` (the first dice roll) is equal to 6. If it is, it
 // sets the variable `lastThrowDouble` to `true`.
-                    if (die1 == 6) {
-                        if (playerOneTurn&&(player1Pnt - (die1 + die2)) >= 40) {
-                            
-                                System.out.println("Player 1 won, by having over 40 points and throwing identical die");
-                                winCon = true;
-
-                            }
-                        
-                        if (!playerOneTurn&&(player2Pnt - (die1 + die2)) >= 40) {
-                            
-                                System.out.println("Player 2 won, by having over 40 points and throwing identical die");
-                                winCon = true;
-
-                        }
-                        
+                    if (die1 == 6) {                        
                         lastThrowDouble = true;
                     }
 // The code block you provided is toggling the value of the boolean variable `playerOneTurn`. If
