@@ -1,5 +1,8 @@
 public class TestDice {
     public static void main(String[] args){
+
+        int amountOfTestRolls = 1000;
+
         int sumis2 = 0;
         int sumis3 = 0;
         int sumis4 = 0;
@@ -14,7 +17,7 @@ public class TestDice {
         int rollDouble = 0;
         double deviation = 0.0;
 
-        for (int i = 0; i < 1000; i++){
+        for (int i = 0; i < amountOfTestRolls; i++){
         int die1 = Dice.rollDie();
         int die2 = Dice.rollDie();
         int sum = die1 + die2;
@@ -61,8 +64,8 @@ public class TestDice {
 
             deviation = deviation + (sum - 7) * (sum - 7);
         }
-        double standardDeviation = deviation / 1000;
-        double afvigelse = (standardDeviation / Math.sqrt(1000)) * 100;
+        double standardDeviation = deviation / amountOfTestRolls;
+        double afvigelse = (standardDeviation / Math.sqrt(amountOfTestRolls)) * 100;
         System.out.println(afvigelse);
         System.out.println("You have rolled " + sumis2 + " 2's");
         System.out.println("You have rolled " + sumis3 + " 3's");
@@ -77,13 +80,13 @@ public class TestDice {
         System.out.println("You have rolled " + sumis12 + " 12's");
         System.out.println("You have rolled " + rollDouble + " doubles");
 
-        double eP2n12 = (1.0/36.0) * 1000.0;
-        double eP3n11 = (2.0/36.0) * 1000.0;
-        double eP4n10 = (3.0/36.0) * 1000.0; 
-        double eP5n9 = (4.0/36.0) * 1000.0;
-        double eP6n8 = (5.0/36.0) * 1000.0;
-        double eP7 = (6.0/36.0) * 1000.0;
-        double ePD = (1.0/6.0) * 1000.0;
+        double eP2n12 = (1.0/36.0) * amountOfTestRolls;
+        double eP3n11 = (2.0/36.0) * amountOfTestRolls;
+        double eP4n10 = (3.0/36.0) * amountOfTestRolls; 
+        double eP5n9 = (4.0/36.0) * amountOfTestRolls;
+        double eP6n8 = (5.0/36.0) * amountOfTestRolls;
+        double eP7 = (6.0/36.0) * amountOfTestRolls;
+        double ePD = (1.0/6.0) * amountOfTestRolls;
         double tP2 = sumis2;
         double tP3 = sumis3;
         double tP4 = sumis4;
