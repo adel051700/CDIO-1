@@ -26,6 +26,9 @@ class Dicegame {
             }
             s.nextLine();
 
+            if (lastThrowDouble && die1 != 6 && die2 != 6){
+                lastThrowDouble = false;
+                }
 // The code block you provided is checking if both dice are ones, and if not, adds points to the player object
             if (die1 != 1 || die2 != 1) {
                 if (playerOneTurn) {
@@ -77,9 +80,7 @@ class Dicegame {
                     if (die1 == 6) {                        
                         lastThrowDouble = true;
                     } 
-                    if (lastThrowDouble && die1 !=6){
-                        lastThrowDouble = false;
-                    }
+
 // The code block you provided is toggling the value of the boolean variable `playerOneTurn`. If
 // `playerOneTurn` is `true`, it sets it to `false`, and if it is `false`, it sets it to `true`. This
 // is done to switch the turn between Player 1 and Player 2 in the game.
