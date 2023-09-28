@@ -43,10 +43,10 @@ class Dicegame {
 // a double). If the rolls are equal, it performs the following actions:
                 if (die1 == die2) {
 
-                    // This code block is checking if a player has accumulated 40 or more points and
-                    // has rolled a double (i.e., both dice have the same value). If these conditions
-                    // are met, it declares the player as the winner and sets the `winCon` variable to
-                    // `true` to exit the game loop.
+// This code block is checking if a player has accumulated 40 or more points and
+// has rolled a double (i.e., both dice have the same value). If these conditions
+// are met, it declares the player as the winner and sets the `winCon` variable to
+// `true` to exit the game loop.
                     if (playerOneTurn&&(player1Pnt - (die1 + die2)) >= 40) {
                         
                             System.out.println("Player 1 won, by having over 40 points and throwing identical die");
