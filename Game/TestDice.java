@@ -1,6 +1,7 @@
 public class TestDice {
     public static void main(String[] args){
 
+        // How many rolls you would like to test with
         int amountOfTestRolls = 1000;
 
         int sumis2 = 0;
@@ -66,7 +67,7 @@ public class TestDice {
         }
         double standardDeviation = deviation / amountOfTestRolls;
         double afvigelse = (standardDeviation / Math.sqrt(amountOfTestRolls)) * 100;
-        System.out.println(afvigelse);
+        
         System.out.println("You have rolled " + sumis2 + " 2's");
         System.out.println("You have rolled " + sumis3 + " 3's");
         System.out.println("You have rolled " + sumis4 + " 4's");
@@ -115,7 +116,7 @@ public class TestDice {
 
 
         System.out.println("This test deviates " + testDeviation + "% from the actual probabilities when rolling two dice");
-
+        System.out.println(afvigelse);
     }
 
     }
