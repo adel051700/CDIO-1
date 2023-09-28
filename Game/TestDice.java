@@ -11,12 +11,17 @@ public class TestDice {
         int sumis10 = 0;
         int sumis11 = 0;
         int sumis12 = 0;
+        int rollDouble = 0;
 
         for (int i = 0; i < 1000; i++){
         int die1 = Dice.rollDie();
         int die2 = Dice.rollDie();
         int sum = die1 + die2;
-        
+
+            if(die1 == die2){
+                rollDouble = rollDouble +1;
+            }
+
             switch (sum){
                 case 2 -> { 
                     sumis2 = sumis2 + 1;
@@ -65,6 +70,12 @@ public class TestDice {
         System.out.println("You have rolled " + sumis10 + " 10's");
         System.out.println("You have rolled " + sumis11 + " 11's");
         System.out.println("You have rolled " + sumis12 + " 12's");
+        System.out.println("You have rolled " + rollDouble + " doubles");
 
-    }   
+    }
+    public static long checkStats(int sum,int num){
+        
+        
+        return 60;
+    }
 }
