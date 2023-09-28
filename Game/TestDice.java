@@ -12,6 +12,7 @@ public class TestDice {
         int sumis11 = 0;
         int sumis12 = 0;
         int rollDouble = 0;
+        double deviation = 0.0;
 
         for (int i = 0; i < 1000; i++){
         int die1 = Dice.rollDie();
@@ -58,7 +59,11 @@ public class TestDice {
                 }
             }
 
+            deviation = deviation + (sum - 7) * (sum - 7);
         }
+        double standardDeviation = deviation / 1000;
+        double afvigelse = (standardDeviation / Math.sqrt(1000)) * 100;
+        System.out.println(afvigelse);
         System.out.println("You have rolled " + sumis2 + " 2's");
         System.out.println("You have rolled " + sumis3 + " 3's");
         System.out.println("You have rolled " + sumis4 + " 4's");
@@ -103,7 +108,9 @@ public class TestDice {
                                 (Math.abs(tP11 - eP3n11) / eP3n11) + 
                                 (Math.abs(tP12 - eP2n12) / eP2n12) +
                                 (Math.abs(tPD - ePD) / ePD)) * 100.0 / 12.0;
-        
+
+
+
         System.out.println("This test deviates " + testDeviation + "% from the actual probabilities when rolling two dice");
 
     }
