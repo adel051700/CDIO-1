@@ -1,13 +1,9 @@
 <<<<<<< main
-This README-file is both for the costumer and user. For the costumer tt contains all the needed information about the program and how it works.
-The "costumer" part of the file is only for the costumer and not the user, because one of the requirements for the program, was that it should be playble without having to give 
-the user any instructions. The "user" part of the file is both for the user and costumer.
-
-For the costumer:
-The program...
+The program is a simple dice game, where two players take turns throwing two dice. The first player to throw a double while having 40 points or more wins. A player can also win by throwing double 6's two times in a row.
 
 For the user:
 How to start the program:
-Step 1: 
-Step 2:
-Step 3:
+Step 1: Double click the RunGame.bat file
+Step 2: If the Windows defender pops up and stops you from running the game, click on "Learn more" and then "Run anyway"
+Step 3: When the terminal opens up and the game starts, press enter to throw the dice.
+Step 4: Continue playng untill someone wins
