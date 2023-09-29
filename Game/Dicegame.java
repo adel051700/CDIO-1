@@ -14,8 +14,8 @@ class Dicegame {
 // The code snippet provided is a part of a dice game. It represents the main game loop where players
 // take turns rolling two dice and accumulating points based on the sum of the dice rolls.
         while (!winCon) {
-            int die1 = Dice.rollDie();
-            int die2 = Dice.rollDie();
+            
+            
 
             if (playerOneTurn) {
                 System.out.println("It's player 1's turn, press the enter button to throw the dice.");
@@ -24,7 +24,11 @@ class Dicegame {
                 System.out.println("It's player 2's turn, press the enter button to throw the dice.");
 
             }
+            
             s.nextLine();
+            double startTime = System.nanoTime();
+            int die1 = Dice.rollDie();
+            int die2 = Dice.rollDie();
 
             if (lastThrowDouble && die1 != 6 && die2 != 6){
                 lastThrowDouble = false;
@@ -40,7 +44,9 @@ class Dicegame {
                     System.out.println("Player 2 rolls a " + die1 + " & a " + die2 + " and now has " + player2Pnt + "\n");
 
                 }
+                double endTime = System.nanoTime();
 
+                System.out.println((endTime-startTime) / 100000 + " ms");
 // The code block you provided is checking if the two dice rolls are equal (i.e., if the player rolled
 // a double). If the rolls are equal, it performs the following actions:
                 if (die1 == die2) {
